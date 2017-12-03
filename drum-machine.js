@@ -15,11 +15,16 @@ var data = {
            createTrack("gold", note(audio, 587)),
            createTrack("gold", note(audio, 523)),
            createTrack("gold", note(audio, 440)),
+           createTrack("gold", note(audio, 666)), //new
+           createTrack("gold", note(audio, 690)), //new
+           createTrack("gold", note(audio, 777)), //new
            createTrack("dodgerblue", kick(audio))]
 };
 
 // Update
 // ------
+
+
 
 // Runs every hundred milliseconds.
 setInterval(function() {
@@ -81,6 +86,7 @@ var screen = document.getElementById("screen").getContext("2d");
       track.steps.forEach(function(on, column) {
 
         // ...If the mouse pointer was inside this button...
+        // если кнопка нажата
         if (isPointInButton(p, column, row)) {
 
           // ...Switch it off if it was on or on if it was off.
