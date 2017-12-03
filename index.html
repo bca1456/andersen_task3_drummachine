@@ -6,6 +6,7 @@
 
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/3ac768d8-7a5c-4fd8-b377-f61d7f1760fa.css"/>
     <link type="text/css" rel="stylesheet" href="resources/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
 
   <body>
@@ -40,6 +41,10 @@
       <!-- Canvas element where the drum machine is drawn -->
       <canvas id="screen" width="637px" height="286px"></canvas>
 
+      <div class="btn-group" id="myBtnGroup">
+        <button class="btn btn-primary" id="saveBtn">Save</button>
+        <button class="btn btn-primary" id="openBtn">Open</button>
+      </div>
       <!-- Load the code that runs the drum machine -->
       <script src="drum-machine.js"></script>
     </div>
