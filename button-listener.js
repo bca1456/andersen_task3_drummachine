@@ -15,18 +15,16 @@ function openFromFile(){
         alert( xhr.status + ': ' + xhr.statusText ); 
     } else {
         var jsonDataArr = JSON.parse(xhr.responseText);
+        console.log(jsonDataArr);
         console.log("length json: " + jsonDataArr.bits.length);
-        //debugger;
-        for (var i = 0; i < jsonDataArr.bits.length; i++){
-            var bit = jsonDataArr.bits[i];
-            setupButtonClickingFromFile(bit);
-        }
+        
+        setupButtonClickingFromFile(jsonDataArr.bits);
         startCoordinateX = 13;
         startCoordinateY = 13;
     }
 }
 
-function setupButtonClickingFromFile(bit) {
+function setupButtonClickingFromFile(bits) {
     
     data.tracks.forEach(function(track, row) {
 
@@ -34,7 +32,7 @@ function setupButtonClickingFromFile(bit) {
         //debugger;
         var p = { x: startCoordinateX, y: startCoordinateY };
         if (isPointInButton(p, column, row)) {
-            if (bit[column] == 1){  //если в файле встретили 1 , то включаем
+            if (bits[row][column] == 1){  //если в файле встретили 1 , то включаем
                 track.steps[column] = true;
             } else {
                 track.steps[column] = false;
