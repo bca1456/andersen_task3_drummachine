@@ -1,7 +1,7 @@
 //id
 var saveBtnId = "saveBtn";
 var openBtnId = "openBtn";
-var screenId = "screen";
+var canvasId = "canvas";
 
 //events
 var eventTypeClick = "click";

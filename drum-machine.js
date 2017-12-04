@@ -45,7 +45,7 @@ setInterval(function() {
 
 // Get the `screen` object.  This is a bundle of functions that draw
 // in the canvas element.
-var screen = document.getElementById("screen").getContext("2d");
+var screen = document.getElementById("canvas").getContext("2d");
 
 // **draw()** draws the drum machine.  Called once at the beginning of
 // the program.  It's then called 60 times a second forever (see the
@@ -73,7 +73,7 @@ var screen = document.getElementById("screen").getContext("2d");
 (function setupButtonClicking() {
 
   // Every time the user clicks on the canvas...
-  document.getElementById("screen").addEventListener("click", function(e) {
+  document.getElementById("canvas").addEventListener("click", function(e) {
 
     // ...Get the coordinates of the mouse pointer relative to the
     // canvas...
