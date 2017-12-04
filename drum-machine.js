@@ -78,7 +78,7 @@ var screen = document.getElementById("screen").getContext("2d");
     // ...Get the coordinates of the mouse pointer relative to the
     // canvas...
     var p = { x: e.offsetX, y: e.offsetY };
-
+    //console.log(e.offsetX + "   " + e.offsetY);
     // ...Go through every track...
     data.tracks.forEach(function(track, row) {
 
@@ -88,7 +88,6 @@ var screen = document.getElementById("screen").getContext("2d");
         // ...If the mouse pointer was inside this button...
         // если кнопка нажата
         if (isPointInButton(p, column, row)) {
-
           // ...Switch it off if it was on or on if it was off.
           track.steps[column] = !on;
         }
@@ -264,3 +263,7 @@ function isPointInButton(p, column, row) {
            p.x > b.x + BUTTON_SIZE ||
            p.y > b.y + BUTTON_SIZE);
 };
+
+
+
+
