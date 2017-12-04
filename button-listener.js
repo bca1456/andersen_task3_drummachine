@@ -1,13 +1,5 @@
 var saveButton = document.getElementById(saveBtnId);
 var openButton = document.getElementById(openBtnId);
-var screenFull = document.getElementById(screenId);
-
-screenFull.onclick = function(event){
-    var x = event.clientX;
-    var y = event.clientY;
-    var coords = "X coords: " + x + ", Y coords: " + y;
-    console.log(coords);
-}
 
 var startCoordinateX = 25;
 var startCoordinateY = 251;
@@ -22,6 +14,7 @@ function openFromFile(){
     if (xhr.status != 200) {
         alert( xhr.status + ': ' + xhr.statusText ); 
     } else {
+        //simulateClick(200, 200);
         console.log("all good ");
         var jsonDataArr = JSON.parse(xhr.responseText);
         console.log("length json: " + jsonDataArr.bits.length);
@@ -43,7 +36,8 @@ function setupButtonClickingFromFile(bit) {
     for (var j = 0; j < rowQuantity; j++){
         simulateClick(startCoordinateX, startCoordinateY);
         //click(startCoordinateX, startCoordinateY);  
-        console.log(startCoordinateX + "   " + startCoordinateY);
+        
+        //console.log(startCoordinateX + "   " + startCoordinateY);
         startCoordinateY += 41 - (j/10 + 1);
     }
 }
@@ -57,6 +51,7 @@ function simulateClick(x, y) {
       pageY: y
     });
     $el.trigger(event);*/
+    console.log("simulate click, x:" + x + " y:" + y);
     jQuery(document.elementFromPoint(x, y)).click();
 }
 
