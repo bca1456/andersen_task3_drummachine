@@ -46,10 +46,18 @@ function setupButtonClickingFromFile(bits) {
 }
 
 function saveToFile(){
-    const writeJsonFile = require('write-json-file');
+
+    /*
+        R I P
+    */
+
+    /*const writeJsonFile = require('write-json-file');
     writeJsonFile('data.json', tracksToJSON()).then(() => {
         console.log('done');
-    });
+    });*/
+    //var fs = require('fs');
+    var jsonNew = JSON.stringify(tracksToJSON());
+    //fs.writeFile('data.json', jsonNew, 'utf8', callback);
 }
 
 function tracksToJSON(){
@@ -61,7 +69,7 @@ function tracksToJSON(){
             //debugger;
             var p = { x: startCoordinateX, y: startCoordinateY };
             if (isPointInButton(p, column, row)) {
-                if (track.steps[column]){  //если в включен звук, то записываем 1 в файл
+                if (track.steps[column]){  //если в включен звук, то записываем 1 arr
                     newArr.push(1);
                     //jsonDataArr.bits[i][column] = 1;
                 } else {
