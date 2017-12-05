@@ -1,0 +1,23 @@
+{
+  "name": "andersen_task3_drummachine",
+  "version": "1.0.0",
+  "description": "customized drum machine",
+  "main": "drum-machine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bca1456/andersen_task3_drummachine.git"
+  },
+  "author": "bca1456",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bca1456/andersen_task3_drummachine/issues"
+  },
+  "homepage": "https://github.com/bca1456/andersen_task3_drummachine#readme",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "write-json-file": "^2.3.0"
+  }
+}
